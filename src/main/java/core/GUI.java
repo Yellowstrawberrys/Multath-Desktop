@@ -1,11 +1,12 @@
 package core;
 
+import gui.titlebar;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.IOException;
 import java.util.Objects;
 
 public class GUI extends Thread{
@@ -22,23 +23,14 @@ public class GUI extends Thread{
         //Remove Title Bar for custom Title Bar
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setUndecorated(true);
-
-        //Components
-        Button offline = new Button("Offline Mode");
-
-        //Set Components
-        offline.setBounds(870, 500, 300, 250);
-        offline.addActionListener(e -> {
-
-        });
-        offline.setBackground(Color.WHITE);
-        offline.setSize(300, 250);
-
-        //Add to Panel
-        panel.add(offline);
-
         //Add to Frame
-        frame.add(panel);
+        try {
+            frame.add(new titlebar(frame), BorderLayout.BEFORE_FIRST_LINE);
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (FontFormatException e) {
+            e.printStackTrace();
+        }
 
         //Start the Program
         frame.pack();
