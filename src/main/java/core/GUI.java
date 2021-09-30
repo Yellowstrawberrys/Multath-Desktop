@@ -19,6 +19,10 @@ public class GUI extends Thread{
         frame.setIconImage(new ImageIcon(Objects.requireNonNull(this.getClass().getResource("/images/logo.png"))).getImage());
         panel.setSize(1024, 768);
 
+        //Remove Title Bar for custom Title Bar
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setUndecorated(true);
+
         //Components
         Button offline = new Button("Offline Mode");
 
@@ -40,6 +44,8 @@ public class GUI extends Thread{
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+
+        //Setting the frame Second
         frame.setSize(1024, 768);
         frame.setResizable(false);
         frame.addWindowListener(new WindowAdapter(){
