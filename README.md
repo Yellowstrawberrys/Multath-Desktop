@@ -24,5 +24,5 @@ This is application that for helping children in maths problems(Multiply, Divisi
 ㄴ I'm thinking maybe on
 
 ### Status
-GUI - 5%
+GUI - 10%
 SYSTEM - 10%
