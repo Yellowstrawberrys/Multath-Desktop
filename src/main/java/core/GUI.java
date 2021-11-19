@@ -18,7 +18,7 @@ public class GUI extends Thread{
         jFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jFrame.setVisible(true);
         jFrame.setSize(720, 480);
-        jFrame.setContentPane(new login().display());
+        jFrame.setContentPane(new gui.main().display());
         jFrame.pack();
         Logging.getLogger().info("Login GUI has been Loaded");
     }
