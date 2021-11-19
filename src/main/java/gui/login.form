@@ -75,7 +75,7 @@
         <properties>
           <font name="Segoe UI" size="36"/>
           <foreground color="-9408400"/>
-          <text value="Label"/>
+          <text value="Password"/>
         </properties>
       </component>
       <component id="a162" class="javax.swing.JPasswordField" binding="passwords">
