@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="685.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17">
+  <columnConstraints>
+    <ColumnConstraints />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.33336639404297" minHeight="10.0" prefHeight="47.00000190734863" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="129.33336639404297" minHeight="10.0" prefHeight="75.99998728434244" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="255.66663074493408" minHeight="10.0" prefHeight="138.66668701171878" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="157.6666717529297" minHeight="10.0" prefHeight="138.66664632161462" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, username!" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <font>
+            <Font name="Segoe UI Light" size="36.0" />
+         </font>
+      </Text>
+      <ScrollPane prefHeight="150.0" prefWidth="685.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <content>
+            <BorderPane prefHeight="131.0" prefWidth="131.0" style="-fx-border-color: blue; -fx-border-radius: 20;">
+               <top>
+                  <Text fx:id="Title" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiply under 10" wrappingWidth="104.89534568786621" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI Light" size="14.0" />
+                     </font>
+                  </Text>
+               </top>
+               <bottom>
+                  <BorderPane prefHeight="31.0" prefWidth="115.0" BorderPane.alignment="CENTER">
+                     <right>
+                        <Button fx:id="start" mnemonicParsing="false" prefHeight="22.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-border-color: blue; -fx-background-radius: 20;" text="Start" BorderPane.alignment="CENTER" />
+                     </right>
+                  </BorderPane>
+               </bottom>
+               <center>
+                  <Text fx:id="Ex" strokeType="OUTSIDE" strokeWidth="0.0" text="10 ⨉ 9 = ?" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font name="Segoe UI" size="15.0" />
+                     </font>
+                  </Text>
+               </center>
+            </BorderPane>
+         </content>
+      </ScrollPane>
+   </children>
+</GridPane>

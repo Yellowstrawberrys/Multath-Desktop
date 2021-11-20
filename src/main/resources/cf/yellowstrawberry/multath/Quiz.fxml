@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<BorderPane prefHeight="131.0" prefWidth="131.0" style="-fx-border-color: blue; -fx-border-radius: 20;" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml">
+<top>
+    <Text fx:id="Title" strokeType="OUTSIDE" strokeWidth="0.0" text="Multiply under 10" wrappingWidth="104.89534568786621" BorderPane.alignment="CENTER">
+        <font>
+            <Font name="Segoe UI Light" size="14.0" />
+        </font>
+    </Text>
+</top>
+<bottom>
+    <BorderPane prefHeight="31.0" prefWidth="115.0" BorderPane.alignment="CENTER">
+        <right>
+            <Button fx:id="start" mnemonicParsing="false" prefHeight="22.0" prefWidth="44.0" style="-fx-background-color: white; -fx-border-radius: 20; -fx-border-color: blue; -fx-background-radius: 20;" text="Start" BorderPane.alignment="CENTER" />
+        </right>
+    </BorderPane>
+</bottom>
+<center>
+    <Text fx:id="Ex" strokeType="OUTSIDE" strokeWidth="0.0" text="10 ⨉ 9 = ?" BorderPane.alignment="CENTER">
+        <font>
+            <Font name="Segoe UI" size="15.0" />
+        </font>
+    </Text>
+</center>
+</BorderPane>
