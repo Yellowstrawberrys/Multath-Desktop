@@ -5,9 +5,8 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.ColumnConstraints?>
-<?import javafx.scene.layout.GridPane?>
-<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -35,34 +34,60 @@
       </ButtonBar>
    </bottom>
    <center>
-      <GridPane BorderPane.alignment="CENTER">
-        <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.333251953125" minWidth="10.0" prefWidth="73.99993133544922" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="386.0000686645508" minWidth="10.0" prefWidth="386.0000686645508" />
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-        </columnConstraints>
-        <rowConstraints>
-            <RowConstraints maxHeight="61.333309173583984" minHeight="10.0" prefHeight="53.333361307779946" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="61.333309173583984" minHeight="10.0" prefHeight="43.333316802978516" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="139.99998537699383" minHeight="10.0" prefHeight="53.666683197021484" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="123.3333511352539" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="101.33331298828125" minHeight="10.0" prefHeight="55.33333333333334" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="93.99999999999997" minHeight="10.0" prefHeight="57.333333333333314" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <font>
-                  <Font name="Segoe UI Light" size="12.0" />
-               </font>
-            </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <font>
-                  <Font name="Segoe UI Light" size="12.0" />
-               </font>
-            </Text>
-            <TextField fx:id="id" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <PasswordField fx:id="password" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-         </children>
-      </GridPane>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <left>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER" />
+         </right>
+         <center>
+            <BorderPane prefHeight="246.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+               <top>
+                  <HBox prefHeight="21.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="ID">
+                           <font>
+                              <Font name="Segoe UI Light" size="18.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </HBox>
+               </top>
+               <center>
+                  <HBox prefHeight="100.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="id" prefHeight="25.0" prefWidth="1521.0" />
+                     </children>
+                  </HBox>
+               </center>
+               <bottom>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <top>
+                        <HBox prefHeight="29.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password">
+                                 <font>
+                                    <Font name="Segoe UI Light" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </top>
+                     <center>
+                        <HBox prefHeight="135.0" prefWidth="489.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <PasswordField fx:id="password" prefHeight="25.0" prefWidth="1521.0" />
+                           </children>
+                        </HBox>
+                     </center>
+                  </BorderPane>
+               </bottom>
+            </BorderPane>
+         </center>
+         <top>
+            <HBox prefHeight="44.0" prefWidth="689.0" BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
    </center>
 </BorderPane>

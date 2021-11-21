@@ -1,5 +1,6 @@
 package cf.yellowstrawberry.multath.gui;
 
+import cf.yellowstrawberry.multath.data.DataManager;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
@@ -18,7 +19,7 @@ public class LoginController {
 
     public void login(){
         if(!id.getText().replaceAll(" ","").isBlank() && !password.getText().replaceAll(" ","").isBlank()){
-
+            DataManager.getStage().setScene(DataManager.getSceneByID(2));
         }
     }
 }

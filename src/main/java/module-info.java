@@ -9,7 +9,9 @@ module cf.yellowstrawberry.multath {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
 
-    opens cf.yellowstrawberry.multath to javafx.fxml;
+    opens cf.yellowstrawberry.multath.gui to javafx.fxml;
+    opens cf.yellowstrawberry.multath.data.System to javafx.fxml;
     exports cf.yellowstrawberry.multath;
     exports cf.yellowstrawberry.multath.gui;
+    exports cf.yellowstrawberry.multath.data.System;
 }

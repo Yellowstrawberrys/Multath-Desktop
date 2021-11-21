@@ -1,5 +1,6 @@
 package cf.yellowstrawberry.multath;
 
+import cf.yellowstrawberry.multath.data.DataManager;
 import cf.yellowstrawberry.multath.system.connection.Connection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -13,16 +14,16 @@ import java.io.IOException;
 public class Starter extends Application {
 
     public static void main(String[] args) {
-        new Connection();
+//        new Connection();
         launch(args);
     }
 
     @Override
-    public void start(Stage primaryStage) throws IOException {
+    public void start(Stage primaryStage) {
         primaryStage.getIcons().add(new Image(Starter.class.getResource("logo.png").toString()));
         primaryStage.setTitle("Multath");
-        Scene scene = new Scene(FXMLLoader.load(Starter.class.getResource("Login.fxml")));
-        primaryStage.setScene(scene);
+        primaryStage.setScene(DataManager.getSceneByID(1));
         primaryStage.show();
+        DataManager.init(primaryStage);
     }
 }
