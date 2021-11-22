@@ -1,6 +1,7 @@
 package cf.yellowstrawberry.multath.gui;
 
 import cf.yellowstrawberry.multath.data.DataManager;
+import cf.yellowstrawberry.multath.data.Enums.QuestionType;
 import cf.yellowstrawberry.multath.system.SystemManager;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
@@ -13,6 +14,7 @@ import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Random;
 import java.util.ResourceBundle;
 
 public class MainController implements Initializable {
@@ -37,14 +39,16 @@ public class MainController implements Initializable {
             Text Example = (Text) root.lookup("#Ex");
             Button StartButton = (Button) root.lookup("#start");
 
+            Random r = new Random();
+
             //Setting Text
-            QuestionName.setText("1-9 Multiply Questions");
-            Example.setText("5 ⨉ 9 = ?");
+            QuestionName.setText(i+". Multiply Questions");
+            Example.setText(String.format("%s ⨉ %s = ?", r.nextInt(8)+1, r.nextInt(8)+1));
 
             //Setting Buttons
             if(!SystemManager.isFinishedQuestion(i)){
                 int finalI = i;
-                StartButton.addEventFilter(EventType.ROOT, event -> SystemManager.setQuestion(1, finalI));
+                StartButton.addEventFilter(EventType.ROOT, event -> SystemManager.setQuestion(1, finalI, QuestionType.Multiplication));
             }else{
                 StartButton.setText("Finished");
                 StartButton.setDisable(true);
