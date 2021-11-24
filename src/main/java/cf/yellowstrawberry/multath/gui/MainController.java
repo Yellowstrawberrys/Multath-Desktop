@@ -3,6 +3,8 @@ package cf.yellowstrawberry.multath.gui;
 import cf.yellowstrawberry.multath.data.DataManager;
 import cf.yellowstrawberry.multath.data.Enums.QuestionType;
 import cf.yellowstrawberry.multath.system.SystemManager;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -48,7 +50,8 @@ public class MainController implements Initializable {
             //Setting Buttons
             if(!SystemManager.isFinishedQuestion(i)){
                 int finalI = i;
-                StartButton.addEventFilter(EventType.ROOT, event -> SystemManager.setQuestion(1, finalI, QuestionType.Multiplication));
+                EventHandler<ActionEvent> buttonHandler = event -> SystemManager.setQuestion(1, finalI, QuestionType.Multiplication);
+                StartButton.setOnAction(buttonHandler);
             }else{
                 StartButton.setText("Finished");
                 StartButton.setDisable(true);
