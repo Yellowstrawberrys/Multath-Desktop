@@ -7,7 +7,9 @@ module cf.yellowstrawberry.multath {
     requires com.dlsc.formsfx;
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
-    requires eu.hansolo.tilesfx;
+    requires java.desktop;
+    requires vosk;
+    requires org.json;
 
     opens cf.yellowstrawberry.multath.gui to javafx.fxml;
     opens cf.yellowstrawberry.multath.data.System to javafx.fxml;
